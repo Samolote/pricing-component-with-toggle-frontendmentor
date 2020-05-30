@@ -1,0 +1,38 @@
+:root {
+	--primary-gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%);
+
+	--very-light-grayish-blue: hsl(240, 78%, 98%);
+	--light-grayish-blue: hsl(234, 14%, 74%);
+	--grayish-blue: hsl(233, 13%, 49%);
+	--dark-grayish-blue: hsl(232, 13%, 33%);
+
+	--white: hsl(0, 0%, 100%);
+
+	--default-transition: 0.3s ease-in-out;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+	font-weight: 700;
+	color: var(--very-dark-blue);
+}
+
+.footer {
+	margin-top: 5rem;
+}
+
+.attribution {
+	font-size: 0.733em;
+	text-align: center;
+}
+
+.attribution__anchor {
+	color: hsl(228, 45%, 44%);
+}
