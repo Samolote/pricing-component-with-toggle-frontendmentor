@@ -15,19 +15,11 @@ const pricing = {
 };
 
 const toggleHandler = function () {
-	if (this.checked) {
-		this.setAttribute('aria-checked', 'true');
-		prices.forEach((price) => {
-			const pricingPlan = price.dataset.pricingPlan;
-			price.textContent = pricing.monthly[pricingPlan];
-		});
-	} else {
-		this.setAttribute('aria-checked', 'false');
-		prices.forEach((price) => {
-			const pricingPlan = price.dataset.pricingPlan;
-			price.textContent = pricing.anually[pricingPlan];
-		});
-	}
+	this.setAttribute('aria-checked', `${this.checked}`);
+	prices.forEach((price) => {
+		const pricingPlan = price.dataset.pricingPlan;
+		price.textContent = this.checked ? pricing.monthly[pricingPlan] : pricing.anually[pricingPlan];
+	});
 };
 
 toggle.addEventListener('click', toggleHandler);
